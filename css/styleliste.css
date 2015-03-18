@@ -1,0 +1,14 @@
+body,html{
+	margin:0;
+	padding:0;
+}
+#content{
+	width:874px;
+	margin:auto;
+	height:auto;
+}
+.pokemon{
+	width: 206px;
+	margin-right: 10px;
+	float:left;
+}
