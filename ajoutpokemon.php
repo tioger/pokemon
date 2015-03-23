@@ -9,8 +9,8 @@ if ($_POST['image'] == $_POST['describ']) {
 $erreur = 'Les 2 champs sont identiques.';
 }
 else {
-$base = mysql_connect ('teammorttp.mysql.db', 'teammorttp', 'marsien13');
-mysql_select_db ('teammorttp', $base);
+$base = mysql_connect ('', '', '');
+mysql_select_db ('', $base);
 
 // on recherche si ce login est déjà utilisé par un autre membre
 $sql = 'SELECT count(*) FROM Pokemon WHERE name="'.mysql_escape_string($_POST['name']).'"';

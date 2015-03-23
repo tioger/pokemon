@@ -1,14 +1,70 @@
 body,html{
 	margin:0;
 	padding:0;
+	height:100%;
+}
+body{
+	background: url("../img/body_bg.png") repeat scroll 0% 0% transparent;
 }
 #content{
-	width:874px;
+	width:884px;
 	margin:auto;
-	height:auto;
+	height:3950px;
+	background: url("../img/content_bg.png") repeat scroll 0% 0% transparent;
+	background-color: white;
 }
 .pokemon{
 	width: 206px;
-	margin-right: 10px;
+	margin-left: 10px;
 	float:left;
+	height: 254px;
+	overflow: hidden;
+	position:relative;
+	border: 1px black solid;
+	border-radius: 20px;
+	margin-top: 10px;
+}
+.poke{
+	width: 206px;
+}
+.pokeimg{
+	width: 206px;
+}
+.pokename{
+width: 206px;
+}
+.pokedescrib{
+	height: 180px;
+	margin-bottom: 30px;
+	background-color: rgba(0, 153, 51, 0.8);
+	width: 100%;
+	position: absolute;
+	bottom: -100%;
+}
+
+.txtaligncent{
+	text-align: center;
+}
+.pokemon:hover .pokedescrib {
+		bottom: 0px;
+		overflow: auto;
+		padding-bottom: 25px;
+	}
+.pokemon:hover .pokedescrib .pokename {
+		position: relative;
+		bottom: 0px;
+		padding-top: 45px;
+		padding-bottom: 25px;
+}
+.animate {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.pokeimg img {
+	height: 215px;
+	width:215px;
 }

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" >
@@ -18,20 +17,35 @@
 				<img src="img/pokeball.png" width="884px"/>
 			</div>
 		</div>
-		<div class="pokemon">
+<?php  
+include ("_mysql.php");
+// On récupère tout le contenu de la table Pokemon
+$reponse = $bdd->query('SELECT * FROM Pokemon');
+
+// On affiche chaque entrée une à une
+while ($donnees = $reponse->fetch())
+{
+?>
+<div class="pokemon">
 			<div class="poke">
 				<div class="pokeimg">
-					<img src="img/001.png">
+					<img src="img/pokemon/<?php echo $donnees['image']; ?>">
 				</div>
 				<div class="pokename txtaligncent">
-					<p>N°1 Bulbizarre</p>
+					<p><?php echo $donnees['id']; ?> <?php echo utf8_decode($donnees['name']); ?></p>
 				</div>
 				<div class="pokedescrib txtaligncent animate">
-					<p>Bulbizarre passe son temps à faire la sieste sous le soleil. Il y a une graine sur son dos. Il absorbe les rayons du soleil pour faire doucement pousser la graine. </p>
+					<p><?php echo utf8_decode($donnees['describ']); ?></p>
 				</div>
 			</div>
 		</div>
-		
+<?php
+
+}
+
+$reponse->closeCursor(); // Termine le traitement de la requête
+
+?>
 	</div>
 </body>
 </html>
